@@ -5,6 +5,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
     goBack: () => ipcRenderer.send('go-back'),
     goForward: () => ipcRenderer.send('go-forward'),
     reload: () => ipcRenderer.send('reload'),
-    // fillUsername: (value) => ipcRenderer.send('fill-username', value),
+    fillUsername: (value) => ipcRenderer.send('fill-username', value),
     // setPassword: (value) => ipcRenderer.send('fill-password', value),
 });

@@ -3,22 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "main": "main.js",
+  "author": "dpsingh",
+  "description": "custom browser demo",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "electron-forge start",
     "lint": "next lint",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "electron ."
+    "electron": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

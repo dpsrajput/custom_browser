@@ -75,17 +75,17 @@ ipcMain.on('reload', () => {
         browserView.webContents.reload();
     }
 });
-// ipcMain.on('fill-username', (event, value) => {
-//     console.log(value)
-//     if (browserView) {
-//         browserView.webContents.executeJavaScript(`
-//             const input = document.getElementById('username');
-//             if (input) {
-//                 input.value = '${value}';
-//             }
-//         `);
-//     }
-// });
+ipcMain.on('fill-username', (event, value) => {
+    console.log(value)
+    if (browserView) {
+        browserView.webContents.executeJavaScript(`
+            const input = document.getElementById('username');
+            if (input) {
+                input.value = '${value}';
+            }
+        `);
+    }
+});
 // ipcMain.on('fill-password', (event, value) => {
 //     console.log(value)
 //     browserView.webContents.executeJavaScript(`

@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.App .Browser {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.App .Browser div {
+  display: flex;
+  padding: 10px;
+}
+.App .Browser input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
